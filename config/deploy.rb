@@ -1,7 +1,7 @@
 # config valid only for current version of Capistrano
 lock '3.3.5'
 
-set :application, 'black-goose'
+set :application, 'blackgoose'
 set :repo_url, 'git@github.com:MatthewVasseur/blackgoose'
 
 # describe the rbenv environment we are deploying into
