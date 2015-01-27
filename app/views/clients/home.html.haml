@@ -1,0 +1,48 @@
+#clients
+  .container
+    %div
+      = link_to root_path do
+        = image_tag "logo.png", width: '200px'
+    %div
+      = link_to "Log Out", destroy_client_session_path, method: :delete
+
+  .container
+    .container.buttons
+      .row.text-center
+        = link_to escorts_path(time_now: true), remote:true do
+          %button Book Now
+        = link_to escorts_path(time_now: false), remote:true do
+          %button Book Later
+
+  .container
+    .container#escorts
+
+      -#
+        %h1 Our Beautiful Escorts!
+
+        .container
+          = form_tag '/escorts', html:{role:"role"}, method: :get do
+
+            = text_field_tag :search, params[:search], placeholder:"Search a Username", autofocus: true
+            = submit_tag 'Search'
+
+          %hr
+
+        .container
+          .row
+            - @escorts.each do |escort|
+              .col-md-4
+                .well.well-lg
+                  .row
+                    .col-xs-6
+                      = link_to show_escort_path(escort.username) do
+                        .container
+                          %b= escort.username
+                        .container
+                          %b= escort.height
+                          ,
+                          %b= escort.weight
+                        .container
+                          PICTURES
+                    .col-xs-6
+                      = link_to "Create Appointment", new_appointment_path(escort_ID: escort.id)

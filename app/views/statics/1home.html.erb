@@ -1,0 +1,135 @@
+<body id="page-top" class="body" data-spy="scroll" data-target=".navbar-fixed-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                    <ul class="nav navbar-nav">
+		                    <li>
+		                        <%= link_to "Invest", "#invest"%>
+		                    </li>
+		                    <li>
+		                        <%= link_to "Explore", "#cars" %>
+		                    </li>
+		                </ul>
+		            </div>
+            </div>
+
+            <a class="navbar-brand page-scroll nav-center" href="#page-top">
+                Black Goose
+            </a>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="brand-heading">shift your dream into gear</h1>
+                        <p class="intro-text">exotic cars that are just around the corner.</p>
+                        <a href="#about" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down fa-lg animated" style="position:relative"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Welcome to the World of Luxautic</h2>
+								<p> Welcome to the world of Luxautic. From the first click to the final mile, our clients don't just get a car - they get an experience unlike any other. Our inventory boasts the finest luxury and exotic vehicles the world has to offer.</p>
+								<p>From Aston Martins and Bentleys to Ferraris and Porsches, we have vehicles in every make, shape and flavor, so you're sure to find exactly what you're looking for.</p>
+								<p>For the young couple looking to have a fun weekend in a new Audi R8 or for the itinerant business man who needs a Porsche for the weekend, Luxautic is a company for people going places.</p>
+								<p>Where are you going?</p>
+
+								<a href="#explore" class="btn btn-circle page-scroll btn-circle-black">
+                    <i class="fa fa-car animated icon-black" style="position:relative"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Explore Section -->
+    <section id="explore" class="content-section text-center">
+        <div class="explore-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>Explore our Fleet</h2>
+                    <p>Browse our immaculately maintained and widely respected<br>fleet of exotic and luxury cars.</p>
+                    <a href="#fleet" class="btn btn-default btn-lg">Explore</a>
+                </div>
+
+
+            </div>
+
+        </div>
+				<a href="#team" class="btn btn-circle page-scroll btn-circle-black">
+            <i class="fa fa-users animated icon-black" style="position:relative;"></i>
+        </a>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Reach Luxautic</h2>
+                <p>Feel free to email or call us to provide feedback, give us suggestions,<br>ask questions, or just talk about cars!</p>
+                <p><a href="mailto:info@luxautic.com">info@luxautic.com</a>
+                </p>
+                <ul class="list-inline banner-social-buttons">
+                    <li>
+                        <a href="https://twitter.com/luxautic" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                    </li>
+                    <li>
+                        <a href="https://facebook.com/luxautic" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
+                    </li>
+                    <li>
+                        <a href="https://plus.google.com/+MatthewVasseur/posts" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">LinkedIn</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+				<a href="#map" class="btn btn-circle page-scroll btn-circle-black">
+            <i class="fa fa-globe animated icon-black" style="position:relative; top:-4px"></i>
+        </a>
+    </section>
+
+    <!-- Map Section -->
+    <div id="map"></div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; Luxautic Limited 2014</p>
+        </div>
+    </footer>
+
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDosD3oNPhXZVudPwGz3GXMqnlBZTt-IeI&sensor=true"></script>
+
+		<!-- Custom javascript grayscale.js file loaded after google api -->
+		<%= javascript_include_tag 'grayscale.js' %>
+
+</body>

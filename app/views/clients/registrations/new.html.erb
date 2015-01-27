@@ -1,0 +1,165 @@
+<h2>Sign up</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="field">
+    <%= f.label :username %><br />
+    <%= f.text_field :username, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :name, "Legal Name" %><br />
+    <%= f.text_field :name %>
+  </div>
+
+  <p>
+    <%= f.label :line1, 'Address 1' %><br />
+    <%= f.text_field :line1 %>
+  </p>
+
+  <p>
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </p>
+
+  <p>
+    <%= f.label :state %><br />
+    <%= f.text_field :state, :size => 2 %>
+  </p>
+
+  <p>
+    <%= f.label :zip, 'Zip Code' %><br />
+    <%= f.text_field :zip %>
+  </p>
+
+  <!-- must be 18 years or older -->
+  <div class="field">
+    <%= f.label :dob, "Date of Birth" %><br />
+    <%= f.date_select :dob, order: [:day, :month, :year],
+    end_year: 1934, start_year: Time.now.year-18 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <% if @validatable %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "off" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  </div>
+
+
+  <div style="width:500px; height: 200px; overflow:auto">
+    <h1>Terms of Service</h1>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Nunc molestie risus id urna volutpat faucibus. Phasellus ac sem leo.
+    Suspendisse turpis nunc, egestas sed scelerisque et, lacinia eu nisl.
+    Aliquam erat volutpat. Fusce id semper quam, consequat euismod ex.
+    Nunc ornare dui quis erat dapibus scelerisque.
+    Quisque in justo sit amet libero scelerisque dignissim.
+    Duis sit amet ullamcorper nunc.
+    Maecenas eu dui eget tellus efficitur consectetur nec quis velit.
+    Vivamus augue velit, vestibulum eget lorem non, dapibus convallis eros.
+
+    Curabitur odio ipsum, auctor eget libero at, efficitur rhoncus ligula.
+    Donec sit amet enim faucibus, facilisis dolor et, commodo velit.
+    Quisque quis justo odio. Maecenas bibendum ipsum eu odio venenatis porta.
+    Nullam eget orci nisl. Suspendisse potenti.
+    Aliquam sapien odio, efficitur quis tellus eget, ornare mollis lectus.
+
+    Suspendisse nunc quam, dignissim quis enim non, ornare facilisis enim.
+    Donec faucibus convallis lectus id viverra.
+    Vivamus viverra, elit ac congue elementum, lectus dui laoreet augue,
+    sit amet semper quam felis quis sapien. Vivamus elementum tristique erat,
+    finibus semper eros. Suspendisse potenti. Morbi aliquam tincidunt enim,
+    quis ultricies enim feugiat a. Phasellus eu vestibulum augue.
+    Suspendisse potenti.
+    Suspendisse nec elit nec enim suscipit gravida ut ac enim.
+    Donec pharetra lacus eros, sed consectetur ex venenatis at.
+
+    Nullam rhoncus libero a urna faucibus, a tincidunt risus rutrum.
+    Donec gravida magna ut magna pellentesque consectetur. Etiam ut dapibus sem.
+    Vivamus condimentum lectus orci, sit amet mollis velit hendrerit quis.
+    Sed ex erat, aliquet a risus at, venenatis consectetur nulla.
+    Suspendisse molestie condimentum feugiat. Vestibulum eget augue lacus.
+    Nullam nulla mi, rutrum id ex ut, vulputate efficitur leo.
+    Nullam vel posuere metus. Ut porta, lacus sit amet luctus euismod,
+    mauris enim pretium tellus, nec pellentesque ligula augue vel sem.
+    In ac justo orci.
+
+    In ligula eros, mattis vel laoreet vel, porta quis justo.
+    Integer tincidunt orci mattis gravida vulputate.
+    Aenean sit amet bibendum nulla, non posuere mi. Aliquam luctus felis libero,
+    sed scelerisque turpis placerat vitae. Etiam luctus,
+    nisl vel pellentesque tincidunt, enim ipsum tristique nibh,
+    vehicula tincidunt nulla nulla et dolor. Vivamus varius est est,
+    ut lacinia sem elementum et.
+    Aliquam vulputate orci id eros placerat tristique.
+    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+    posuere cubilia Curae; Sed at lectus et dolor commodo convallis.
+    Sed commodo venenatis sodales.
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Nunc molestie risus id urna volutpat faucibus. Phasellus ac sem leo.
+    Suspendisse turpis nunc, egestas sed scelerisque et, lacinia eu nisl.
+    Aliquam erat volutpat. Fusce id semper quam, consequat euismod ex.
+    Nunc ornare dui quis erat dapibus scelerisque.
+    Quisque in justo sit amet libero scelerisque dignissim.
+    Duis sit amet ullamcorper nunc.
+    Maecenas eu dui eget tellus efficitur consectetur nec quis velit.
+    Vivamus augue velit, vestibulum eget lorem non, dapibus convallis eros.
+
+    Curabitur odio ipsum, auctor eget libero at, efficitur rhoncus ligula.
+    Donec sit amet enim faucibus, facilisis dolor et, commodo velit.
+    Quisque quis justo odio. Maecenas bibendum ipsum eu odio venenatis porta.
+    Nullam eget orci nisl. Suspendisse potenti.
+    Aliquam sapien odio, efficitur quis tellus eget, ornare mollis lectus.
+
+    Suspendisse nunc quam, dignissim quis enim non, ornare facilisis enim.
+    Donec faucibus convallis lectus id viverra.
+    Vivamus viverra, elit ac congue elementum, lectus dui laoreet augue,
+    sit amet semper quam felis quis sapien. Vivamus elementum tristique erat,
+    finibus semper eros. Suspendisse potenti. Morbi aliquam tincidunt enim,
+    quis ultricies enim feugiat a. Phasellus eu vestibulum augue.
+    Suspendisse potenti.
+    Suspendisse nec elit nec enim suscipit gravida ut ac enim.
+    Donec pharetra lacus eros, sed consectetur ex venenatis at.
+
+    Nullam rhoncus libero a urna faucibus, a tincidunt risus rutrum.
+    Donec gravida magna ut magna pellentesque consectetur. Etiam ut dapibus sem.
+    Vivamus condimentum lectus orci, sit amet mollis velit hendrerit quis.
+    Sed ex erat, aliquet a risus at, venenatis consectetur nulla.
+    Suspendisse molestie condimentum feugiat. Vestibulum eget augue lacus.
+    Nullam nulla mi, rutrum id ex ut, vulputate efficitur leo.
+    Nullam vel posuere metus. Ut porta, lacus sit amet luctus euismod,
+    mauris enim pretium tellus, nec pellentesque ligula augue vel sem.
+    In ac justo orci.
+
+    In ligula eros, mattis vel laoreet vel, porta quis justo.
+    Integer tincidunt orci mattis gravida vulputate.
+    Aenean sit amet bibendum nulla, non posuere mi. Aliquam luctus felis libero,
+    sed scelerisque turpis placerat vitae. Etiam luctus,
+    nisl vel pellentesque tincidunt, enim ipsum tristique nibh,
+    vehicula tincidunt nulla nulla et dolor. Vivamus varius est est,
+    ut lacinia sem elementum et.
+    Aliquam vulputate orci id eros placerat tristique.
+    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+    posuere cubilia Curae; Sed at lectus et dolor commodo convallis.
+    Sed commodo venenatis sodales.
+  </div>
+  <p>
+    <%= f.label :terms_of_service, "Do you accept our terms of service?" %>
+    <%= f.check_box :terms_of_service %>
+  <p>
+
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+
+<%= render "clients/shared/links" %>

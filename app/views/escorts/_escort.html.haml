@@ -1,0 +1,15 @@
+.col-md-4
+  .well.well-lg
+    .row
+      .col-xs-6
+        = link_to show_escort_path(escort.username) do
+          %div
+            %b= escort.username
+          %div
+            %b= escort.height
+            ,
+            %b= escort.weight
+          %div
+            PICTURES
+      .col-xs-6
+        = link_to "Create Appointment", new_appointment_path(escort_ID: escort.id)

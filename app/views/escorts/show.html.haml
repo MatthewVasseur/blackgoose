@@ -1,0 +1,47 @@
+.container
+  .text-center
+    %h1
+      The Wonderful
+      = @escort.username
+  .jumbotron
+    .row
+      .col-xs-4.col-xs-offset-2
+        %p Height
+      .col-xs-4
+        %b= @escort.height
+    .row
+      .col-xs-4.col-xs-offset-2
+        %p Weight
+      .col-xs-4
+        %b= @escort.weight
+    .row
+      .col-xs-4.col-xs-offset-2
+        %p Ethnicity
+      .col-xs-4
+        %b= @escort.ethnicity
+    .row
+      .col-xs-4.col-xs-offset-2
+        %p Breast Size
+      .col-xs-4
+        %b= @escort.tit_size
+    .row
+      .col-xs-4.col-xs-offset-2
+        %p Breast Type
+      .col-xs-4
+        %b= @escort.tit_type
+    .row
+      .col-xs-4.col-xs-offset-2
+        %p Eye Color
+      .col-xs-4
+        %b= @escort.eyec
+    .row
+      .col-xs-4.col-xs-offset-2
+        %p Hair Color
+      .col-xs-4
+        %b= @escort.hairc
+
+    PICTURES
+
+- if client_signed_in?
+  .container
+    = render file: 'appointments/new'

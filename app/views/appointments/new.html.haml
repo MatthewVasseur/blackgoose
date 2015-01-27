@@ -1,0 +1,39 @@
+.container.text-center
+  %h1
+    New Appointment with
+    = @escort.username
+
+  = form_for @appointment, html:{role:"form"} do |f|
+
+    = hidden_field_tag :client_ID, @client.id
+    = hidden_field_tag :escort_ID, @escort.id
+
+    %h2
+      %b Where to Meet (Location)
+    .form-inline
+      = label_tag :street, "Street Address"
+      = text_field_tag :street, nil, placeholder: "27 Jefferson Road", required:true
+
+      = label_tag :city, "City"
+      = text_field_tag :city, nil, placeholder: "New York", required:true
+    .form-inline
+      = label_tag :state, "State"
+      = text_field_tag :state, nil, placeholder: "NY", required:true
+
+      = label_tag :zip, "Zip Code"
+      = text_field_tag :zip, nil, placeholder:"06295", required:true
+
+    %h2
+      %b When to Meet (Time)
+
+    (TO DO: CALENDAR)
+    = f.datetime_select :time
+
+    %h2
+      %b How much (Price)
+    .form-inline
+      = f.label :price, ((@escort.price / 100 ).to_s + " dollars")
+      = f.hidden_field :price, value: (@escort.price)
+
+    .actions
+      = f.submit "Schedule", class: "btn btn-success"

@@ -1,0 +1,42 @@
+/*!
+ * Start Bootstrap - Agency Bootstrap Theme (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ * Heavily modified to include only necessary styling
+ */
+
+.team-member {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.team-member img {
+    margin: 0 auto;
+    border: 7px solid #000;
+		width:300px;
+}
+
+.team-member h4 {
+    margin-top: 25px;
+    margin-bottom: 0;
+    text-transform: none;
+}
+
+.team-member p {
+		font-size:16px;
+    margin-top: 0;
+		margin-bottom:0;
+}
+
+div.team-right {
+	float:right;
+}
+
+div.team-left {
+	clear:both;
+}
+
+div.team-middle{
+		position:relative;
+		top:194.5px;
+}

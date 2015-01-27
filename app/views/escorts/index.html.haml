@@ -1,0 +1,31 @@
+.container
+  %h1 Our Beautiful Escorts!
+
+  .container
+    = form_tag '/escorts', html:{role:"role"}, method: :get do
+
+      = text_field_tag :search, params[:search], placeholder:"Search a Username", autofocus: true
+      = submit_tag 'Search'
+
+    %hr
+
+  .container
+    .row
+      - @escorts.each do |e|
+        = render e
+      -#
+        .col-md-4
+          .well.well-lg
+            .row
+              .col-xs-6
+                = link_to show_escort_path(escort.username) do
+                  .container
+                    %b= escort.username
+                  .container
+                    %b= escort.height
+                    ,
+                    %b= escort.weight
+                  .container
+                    PICTURES
+              .col-xs-6
+                = link_to "Create Appointment", new_appointment_path(escort_ID: escort.id)

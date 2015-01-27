@@ -1,0 +1,52 @@
+// Place all the styles related to the Clients controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body #clients {
+  background:
+    linear-gradient(
+      rgba(175, 175, 175, 0.4),
+      rgba(175, 175, 175, 0.4)
+    ),
+    url(background.jpg) no-repeat bottom center fixed;
+  background-color: #fff;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+
+  height:100%;
+}
+
+#clients .container.buttons {
+  position:absolute;
+  top:50%;
+}
+
+#clients .container.buttons button {
+  margin-right:60px;
+  border:2px solid #fff;
+  background:transparent;
+  border-radius:0;
+  color:#fff;
+  font-size:16px;
+  font-weight:bold;
+  text-shadow:none;
+
+  padding:10px 25px;
+}
+
+#clients .container.buttons button:hover {
+  color:#000;
+  background-color:#fff;
+  webkit-transition: background-color 0.2s, color 0.2s;
+  -moz-transition: background-color 0.2s, color 0.2s;
+  -ms-transition: background-color 0.2s, color 0.2s;
+  -o-transition: background-color 0.2s, color 0.2s;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+#clients .container#escorts {
+  width:90%;
+  margin-top:50px;
+}

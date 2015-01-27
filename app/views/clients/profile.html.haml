@@ -1,0 +1,34 @@
+.container
+  .text-center
+    %h1 My Profile
+  .jumbotron
+    .row
+      .col-md-4.col-md-offset-2
+        %p Username
+      .col-md-4
+        %b= @client.username
+    .row
+      .col-md-4.col-md-offset-2
+        %p Account Number
+      .col-md-4
+        %b= @client.token
+
+  / DRY THIS OUT LATER!!!
+  .panel.panel-default
+    .panel-heading
+      Past Appointments
+
+    - if @past_appointments.empty?
+      .panel-body
+        No Past Appointments
+    - @past_appointments.each do |appointment|
+      .panel-body
+        .row
+          .col-xs-5
+            = appointment.time
+          .col-xs-5
+            = appointment.location
+          .col-xs-2
+            = appointment.price / 100.00
+
+  = link_to "Edit", edit_client_registration_path(@client)

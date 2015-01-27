@@ -1,0 +1,87 @@
+%body#page-top.body{data: {spy: "scoll", target: "navbar-fixed-top"}}
+  %nav.navbar.navbar-custom.navbar-fixed-top{role:"navigation"}
+    .container
+      .navbar-header
+        %button.navbar-toggle{type: "button", |
+        data: {toggle:"collapse", target:".navbar-main-collapse"}} |
+          %i.fa.fa-bars
+        .collapse.navbar-collapse.navbar-right.navbar-main-collapse
+          %ul.nav.navbar-nav
+            - if client_signed_in?
+              %li
+                = link_to "Log Out", destroy_client_session_path, method: :delete
+              %li
+                = link_to "My Profile", profile_client_path
+              %li
+                = link_to "Escorts", escorts_path
+
+            - elsif escort_signed_in?
+              %li
+                = link_to "Log Out", destroy_escort_session_path, method: :delete
+              %li
+                = link_to "My Profile", profile_escort_path
+
+            -else
+              %li
+                = link_to "Escort", new_escort_session_path
+              %li
+                = link_to "Client", new_client_session_path
+
+      %a.navbar-brand.page-scroll.nav-center{href:"#page-top"}
+        Black Goose
+
+      .collapse.navbar-collapse.navbar-right.navbar-main-collapse
+        %ul.nav.navbar-nav
+          %li.hidden
+            %a{href:"#page-top"}
+  / Intro Section
+  %header.intro
+    .intro-body
+      .container
+        .row
+          .col-md-8.col-md-offset-2
+            %h1.brand-heading instant escort booking
+            %p.intro-text the world's first and largest platform for booking escorts
+            %a.btn-circle.page-scroll{href:"#about"}
+              %i.fa.fa-angle-double-down.animated
+
+  / About Section
+  %section#about.container.content-section.text-center
+    .row
+      .col-lg-8.col-lg-offset-2
+        %h2 Welcome to Black Goose
+        %p Lorem shut the shizzle up dolizzle sit amizzle, bling bling adipiscing elit.
+        %p Nullam sapien velit, owned volutpizzle, suscipizzle owned, ma nizzle vel, cool. P
+        %p Pellentesque eget tortor. Sizzle erizzle. Ghetto izzle black dapibus tempus check it.
+        %p For sure ass nibh izzle hizzle. Fo shizzle my nizzle fo shizzle tortor. Boofron bling.
+
+        %a.btn-circle.page-scroll.btn-circle-black{href:"#explore"}
+          %i.fa.fa-car.animated.icon-black
+
+  / Explore Section
+  %section#explore.content-section.text-center
+    .explore-section
+      .container
+        .col-lg-8.col-lg-offset-2
+          %h2 Don't Explore Alone...
+          %p allow our wonderful escorts to be by your side
+          %a.btn.btn-default.btn-lg{href:"#escorts"} Explore
+
+  / Contact Section
+  %section#contact.container.content-section.text-center
+    .row
+      .col-lg-8.col-lg-offset-2
+        %h2 Reach Black Goose
+        %p email or call
+        %a{href:"mailto:matt@black-goose.com"} Matt Vasseur
+        %ul.list-inline.banner-social-buttons
+          %li
+            %a.btn.btn-default.btn-lg{href:"https://twitter.com/#black-goose"}
+              %i.fa.fa-twitter.fa-fw
+                %span.network-name Twitter
+
+  %footer
+    .container.text-center
+      %p Copyright &copy; Black Goose
+
+= javascript_include_tag 'grayscale.js'
