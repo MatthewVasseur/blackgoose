@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: black-goose_production
-  username: black-goose
+  database: black_goose_production
+  username: black_goose
   password: <%= ENV['BLACK-GOOSE_DATABASE_PASSWORD'] %>
