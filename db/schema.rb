@@ -51,82 +51,82 @@ ActiveRecord::Schema.define(version: 20150121050821) do
 
   create_table "appointments", force: :cascade do |t|
     t.datetime "time"
-    t.string   "location",    limit: 255
+    t.string   "location"
     t.integer  "price"
-    t.boolean  "c_confirmed",             default: false
-    t.boolean  "e_confirmed",             default: false
+    t.boolean  "c_confirmed", default: false
+    t.boolean  "e_confirmed", default: false
     t.integer  "escort_id"
     t.integer  "client_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "p_confirmed",             default: false
-    t.string   "notes",                   default: "N/A"
-    t.boolean  "cancelled",               default: false
-    t.boolean  "no_show",                 default: false
+    t.boolean  "p_confirmed", default: false
+    t.string   "notes",       default: "N/A"
+    t.boolean  "cancelled",   default: false
+    t.boolean  "no_show",     default: false
   end
 
   add_index "appointments", ["client_id"], name: "index_appointments_on_client_id", using: :btree
   add_index "appointments", ["escort_id"], name: "index_appointments_on_escort_id", using: :btree
 
   create_table "clients", force: :cascade do |t|
-    t.string   "username",               limit: 255, default: "",    null: false
-    t.string   "encrypted_password",     limit: 255, default: "",    null: false
-    t.string   "reset_password_token",   limit: 255
+    t.string   "username",               default: "",    null: false
+    t.string   "encrypted_password",     default: "",    null: false
+    t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",                      default: 0,     null: false
+    t.integer  "sign_in_count",          default: 0,     null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.inet     "current_sign_in_ip"
     t.inet     "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "name",                   limit: 255
+    t.string   "name"
     t.date     "dob"
-    t.string   "line1",                  limit: 255
-    t.string   "city",                   limit: 255
-    t.string   "state",                  limit: 255
-    t.string   "zip",                    limit: 255
-    t.boolean  "verified",                           default: false
-    t.string   "token",                  limit: 255, default: "0"
+    t.string   "line1"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
+    t.boolean  "verified",               default: false
+    t.string   "token",                  default: "0"
   end
 
   add_index "clients", ["reset_password_token"], name: "index_clients_on_reset_password_token", unique: true, using: :btree
   add_index "clients", ["username"], name: "index_clients_on_username", unique: true, using: :btree
 
   create_table "escorts", force: :cascade do |t|
-    t.string   "email",                  limit: 255, default: "",    null: false
-    t.string   "encrypted_password",     limit: 255, default: "",    null: false
-    t.string   "reset_password_token",   limit: 255
+    t.string   "email",                  default: "",    null: false
+    t.string   "encrypted_password",     default: "",    null: false
+    t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",                      default: 0,     null: false
+    t.integer  "sign_in_count",          default: 0,     null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.inet     "current_sign_in_ip"
     t.inet     "last_sign_in_ip"
-    t.string   "confirmation_token",     limit: 255
+    t.string   "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
-    t.string   "unconfirmed_email",      limit: 255
+    t.string   "unconfirmed_email"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "username",               limit: 255
-    t.string   "name",                   limit: 255
+    t.string   "username"
+    t.string   "name"
     t.date     "dob"
-    t.string   "line1",                  limit: 255
-    t.string   "city",                   limit: 255
-    t.string   "state",                  limit: 255
-    t.string   "zip",                    limit: 255
-    t.string   "height",                 limit: 255
-    t.string   "weight",                 limit: 255
-    t.string   "ethnicity",              limit: 255
-    t.string   "tit_size",               limit: 255
-    t.string   "tit_type",               limit: 255
-    t.string   "eyec",                   limit: 255
-    t.string   "hairc",                  limit: 255
-    t.boolean  "verified",                           default: false
-    t.string   "token",                  limit: 255, default: "0"
+    t.string   "line1"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
+    t.string   "height"
+    t.string   "weight"
+    t.string   "ethnicity"
+    t.string   "tit_size"
+    t.string   "tit_type"
+    t.string   "eyec"
+    t.string   "hairc"
+    t.boolean  "verified",               default: false
+    t.string   "token",                  default: "0"
     t.integer  "price"
     t.boolean  "online"
     t.string   "operation_area"

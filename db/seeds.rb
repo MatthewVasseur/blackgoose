@@ -57,7 +57,7 @@
     name: "Example Girl", line1: "69 Example Lane", city: "Examplity",
     state: "EX", zip: "55569", dob:"1990-03-02", ethnicity:"White",
     height:"69", weight:"120", tit_size:"C", tit_type:"Natural", eyec:"Blue",
-    hairc:"Blonde", password:"12345678"})
+    hairc:"Blonde", password:"12345678", price:30000})
 
   Escort.create({email: "girl@escorting.com", name: "Hot Girl Escort",
     username: "HotGirl112", line1: "69 California Drive", city: "Las Vegas",
