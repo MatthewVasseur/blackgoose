@@ -15,7 +15,7 @@ body #clients {
   background-size: cover;
   -o-background-size: cover;
 
-  height:100%;
+  height:2000px;
 }
 
 #clients .container.buttons {
@@ -49,4 +49,14 @@ body #clients {
 #clients .container#escorts {
   width:90%;
   margin-top:50px;
+}
+
+#clients .container#escorts .escort-block-out {
+  border:1px dotted #000;
+}
+
+#clients .container#escorts .escort-block-in {
+
+  margin:10px 5px;
+  padding-top:10px;
 }

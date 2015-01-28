@@ -1,3 +1,8 @@
+- if params[:time_now] == "true"
+  %p displaying #{@escorts.count} escorts available near you, tonight
+- else
+  %p displaying the #{@escorts.count} meeting your derived preferences
+
 .row
   - @escorts.each do |e|
     = render e

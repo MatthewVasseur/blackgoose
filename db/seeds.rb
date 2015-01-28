@@ -63,22 +63,22 @@
     username: "HotGirl112", line1: "69 California Drive", city: "Las Vegas",
     state: "NV", zip: "04791", dob:"1990-09-14", ethnicity:"White",
     height:"68", weight:"115", tit_size:"C", tit_type:"Natural", eyec:"Blue",
-    hairc:"Blonde", password:"12345678"})
+    hairc:"Blonde", password:"12345678", price:20000})
 
   Escort.create({email: "collegegirl@penn.edu", username: "PennCollegeGirl",
     name: "Penn College Girl", line1: "69 Penn Lane", city: "Philadelphia",
     state: "PA", zip: "53062", dob:"1991-03-02", ethnicity:"White",
     height:"64", weight:"110", tit_size:"B", tit_type:"Natural", eyec:"Brown",
-    hairc:"Brown", password:"12345678"})
+    hairc:"Brown", password:"12345678", price:35{000})
 
   Escort.create({email: "your@fantasy.com", username: "YourFantasy",
     name: "Your Fantasy", line1: "69 Fantasy Street", city: "Fantasia",
     state: "FA", zip: "00001", dob:"1990-12-02", ethnicity:"Black",
     height:"67", weight:"114", tit_size:"D", tit_type:"Fake", eyec:"Brown",
-    hairc:"Black", password:"12345678"})
+    hairc:"Black", password:"12345678", price:30000})
 
   Escort.create({email: "generic@typical.com", username: "Generic Escort",
     name: "Generic Escort", line1: "69 Typical Road", city: "Genericity",
     state: "GE", zip: "12345", dob:"1990-09-09", ethnicity:"Asian",
     height:"63", weight:"100", tit_size:"DD", tit_type:"Natural", eyec:"Green",
-    hairc:"Brown", password:"12345678"})
+    hairc:"Brown", password:"12345678", price:30000})

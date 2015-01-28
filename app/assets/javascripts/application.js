@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.easing.min.js
+//= require bootstrap.min
 
 //= require turbolinks
 //= require bootstrap-sprockets

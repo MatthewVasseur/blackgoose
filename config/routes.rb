@@ -7,10 +7,10 @@ Rails.application.routes.draw do
   devise_for :clients
 
   root 'statics#home'
+  get 'home_client' => 'clients#home'#, as: "home_client"
 
   authenticated :client do
     get 'profile' => 'clients#profile', as: "profile_client"
-    get 'home_client' => 'clients#home'#, as: "home_client"
   end
 
   authenticated :escort do
