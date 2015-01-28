@@ -14,7 +14,6 @@
 //= require jquery_ujs
 //= require jquery.easing.min.js
 //= require bootstrap.min
-//= require jquery.autosize
 
 //= require turbolinks
 //= require bootstrap-sprockets
