@@ -18,3 +18,5 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
+
+console.log('hi');
