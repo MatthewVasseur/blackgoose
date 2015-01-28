@@ -10,5 +10,13 @@ class ClientsController < ApplicationController
     if !client_signed_in?
       redirect_to root_path
     end
+
+    @chosen_escort = nil
+
+    gon.push({
+      page:"start-zero"
+    })
+
+
   end
 end

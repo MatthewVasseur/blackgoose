@@ -15,7 +15,8 @@ body #clients {
   background-size: cover;
   -o-background-size: cover;
 
-  height:2000px;
+  min-height:100%;
+  padding-bottom:100px;
 }
 
 #clients .container.buttons {
@@ -24,7 +25,8 @@ body #clients {
 }
 
 #clients .container.buttons button {
-  margin-right:60px;
+  margin-right:7px;
+  margin-left:53px;
   border:2px solid #fff;
   background:transparent;
   border-radius:0;
@@ -46,6 +48,16 @@ body #clients {
   transition: background-color 0.2s, color 0.2s;
 }
 
+#clients .container.buttons button.chosen {
+  color:#000;
+  background-color:#fff;
+}
+
+#clients #down {
+  position:absolute;
+  font-size:50px;
+}
+
 #clients .container#escorts {
   width:90%;
   margin-top:50px;
@@ -53,6 +65,11 @@ body #clients {
 
 #clients .container#escorts .escort-block-out {
   border:1px dotted #000;
+}
+
+#clients .container#escorts .escort-block-out.chosen {
+  border-color:#f30;
+  border-style:solid;
 }
 
 #clients .container#escorts .escort-block-in {
