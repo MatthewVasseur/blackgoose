@@ -1,3 +1,18 @@
-$("#clients .container.buttons").addClass("animated fadeOutDown");
+$("#clients .container.buttons").addClass("animated fadeOutUp");
+$("#clients .container.buttons").removeClass("fadeInDown");
+
+<% if params[:time_now] == "true" %>
+  $("#clients .buttons #now").addClass("chosen");
+  $("#clients .buttons #later").removeClass("chosen");
+<% else %>
+  $("#clients .buttons #later").addClass("chosen");
+  $("#clients .buttons #now").removeClass("chosen");
+<% end %>
+
 $("#clients #escorts").html("<%= escape_javascript(render "escorts/escorts") %>");
+$("#clients #escorts").removeClass("fadeOutDown")
 $("#clients #escorts").addClass("animated fadeInUpBig");
+
+
+
+var page = "escorts";

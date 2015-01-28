@@ -10,10 +10,9 @@
     .container.buttons
       .row.text-center
         = link_to escorts_path(time_now: true), remote:true do
-          %button Book Now
+          %button#now Book Now
         = link_to escorts_path(time_now: false), remote:true do
-          %button Book Later
-
+          %button#later Book Later
   .container
     .container#escorts
 
