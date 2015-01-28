@@ -41,6 +41,8 @@ Up until 1/14/15
 
 * Making big gains in appointment process!
 
+* A lot of gains in the flow. Getting an idea of how the final product will feel.
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
