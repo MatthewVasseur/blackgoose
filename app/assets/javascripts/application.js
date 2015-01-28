@@ -18,6 +18,3 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
-
-
-var page = "start-zero";

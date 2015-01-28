@@ -13,19 +13,19 @@ jQuery ->
     return
 
 pageUp = ->
-  if (page == "escorts")
+  if (gon.page == "escorts")
     jQuery ->
       $("#clients .container.buttons").removeClass("fadeOutUp")
       $("#clients .container.buttons").addClass("fadeInDown")
       $("#clients #escorts").removeClass("fadeInUpBig")
       $("#clients #escorts").addClass("fadeOutDown")
-      page = "buttons"
+      gon.page = "buttons"
 
 pageDown = ->
-  if (page == "buttons")
+  if (gon.page == "buttons")
     jQuery ->
       $("#clients .container.buttons").addClass("fadeOutUp")
       $("#clients .container.buttons").removeClass("fadeInDown")
       $("#clients #escorts").removeClass("fadeOutDown")
       $("#clients #escorts").addClass("animated fadeInUpBig");
-      page = "escorts"
+      gon.page = "escorts"

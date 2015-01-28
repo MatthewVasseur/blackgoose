@@ -15,7 +15,7 @@ class ClientsController < ApplicationController
 
     gon.push({
       page:"start-zero"
-      })
+    })
 
 
   end
