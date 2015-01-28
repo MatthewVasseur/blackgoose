@@ -19,4 +19,9 @@
 //= require bootstrap-sprockets
 //= require_tree .
 
-console.log('hi');
+console.log('app loaded');
+
+
+$("#clients").click(function() {
+  alert('hey');
+});
