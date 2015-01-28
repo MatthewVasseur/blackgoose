@@ -1,5 +1,5 @@
 class AppointmentMailer < ApplicationMailer
-  default from: "matt@marmar.is"
+  default from: "appointment@marmar.is"
 
   def tonight_email(apt)
     @time = apt.time
@@ -7,7 +7,7 @@ class AppointmentMailer < ApplicationMailer
     @client = apt.client
     @escort = apt.escort
 
-    mail(to: "mattvasseur@gmail.com", subject: 'Appointment Tonight!')
+    mail(to: @escort.email, subject: 'Appointment Tonight!')
   end
 
 end
