@@ -19,7 +19,7 @@ class AppointmentsController < ApplicationController
       if @appointment.save
         AppointmentMailer.tonight_email(@appointment).deliver
 
-        format.html { redirect_to profile_client_path, notice: "Thank you for scheduling an Appointment!" }
+        format.html { redirect_to home_client_path, notice: "Thank you for scheduling an Appointment!" }
       else
         format.html { render :new} # new_appointment, notice: "We're sorry, there was an error with your booking" }
         format.json { render json: @appointment.errors, status: :unprocessable_entity }
