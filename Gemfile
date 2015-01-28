@@ -76,3 +76,5 @@ gem 'puma'
 # developement email
 gem "letter_opener", :group => :development
 
+# gon for javascript
+gem 'gon'

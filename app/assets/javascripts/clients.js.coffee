@@ -5,9 +5,10 @@
 jQuery ->
   $('html').keydown (e) ->
     if (e.which == 40)
-      console.log('down')
+      # console.log('down')
+      pageDown()
     else if (e.which == 38)
-      console.log('up')
+      # console.log('up')
       pageUp()
     return
 
@@ -18,4 +19,13 @@ pageUp = ->
       $("#clients .container.buttons").addClass("fadeInDown")
       $("#clients #escorts").removeClass("fadeInUpBig")
       $("#clients #escorts").addClass("fadeOutDown")
+      page = "buttons"
 
+pageDown = ->
+  if (page == "buttons")
+    jQuery ->
+      $("#clients .container.buttons").addClass("fadeOutUp")
+      $("#clients .container.buttons").removeClass("fadeInDown")
+      $("#clients #escorts").removeClass("fadeOutDown")
+      $("#clients #escorts").addClass("animated fadeInUpBig");
+      page = "escorts"

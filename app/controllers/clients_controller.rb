@@ -13,5 +13,10 @@ class ClientsController < ApplicationController
 
     @chosen_escort = nil
 
+    gon.push({
+      page:"start-zero"
+      })
+
+
   end
 end
