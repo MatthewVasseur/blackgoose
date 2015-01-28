@@ -82,13 +82,13 @@
     height:"63", weight:"100", tit_size:"DD", tit_type:"Natural", eyec:"Green",
     hairc:"Brown", password:"12345678", price:30000})
 
-  Escort.create({email: "kurt@marmar.is", username: "kurtmsk",
+  Escort.create({email: "admin@marmar.is", username: "kurtmsk",
     name: "KKush Esscort", line1: "69 Typical Road", city: "Genericity",
     state: "GE", zip: "12345", dob:"1990-09-09", ethnicity:"White",
     height:"63", weight:"100", tit_size:"C", tit_type:"Natural", eyec:"Blue",
     hairc:"Blonde", password:"12345678", price:40000})
 
-  Escort.create({email: "matt@marmar.is", username: "marbv",
+  Escort.create({email: "planetpluta@gmail.com", username: "marbv",
     name: "Mar BerVes", line1: "69 Typical Road", city: "Genericity",
     state: "GE", zip: "12345", dob:"1990-09-09", ethnicity:"White",
     height:"63", weight:"100", tit_size:"C", tit_type:"Natural", eyec:"Blue",
