@@ -72,3 +72,7 @@ gem 'activeadmin', github: 'activeadmin'
 
 # puma server
 gem 'puma'
+
+# developement email
+gem "letter_opener", :group => :development
+
