@@ -6,9 +6,11 @@ jQuery ->
   $('html').keydown (e) ->
     if (e.which == 40)
       # console.log('down')
+      e.preventDefault();
       pageDown()
     else if (e.which == 38)
       # console.log('up')
+      e.preventDefault();
       pageUp()
     return
 
@@ -21,6 +23,7 @@ pageUp = ->
     gon.page = "buttons"
 
   else if (gon.page == "appointment")
+    $("#clients #escorts").animate({height: "100%"}, 0);
     $("#clients #escorts").addClass("fadeInDownBig");
     $("#clients #escorts").removeClass("fadeOutUp hideMe");
     $("#clients #appointment").addClass("fadeOutDown hideMe")
@@ -36,9 +39,9 @@ pageDown = ->
     gon.page = "escorts"
 
   else if (gon.page == "escorts")
+    $("#clients #escorts").animate({height: "0"}, 2750);
     $("#clients #escorts").addClass("fadeOutUp hideMe");
     $("#clients #escorts").removeClass("fadeInUpBig");
     $("#clients #appointment").removeClass("fadeOutDown hideMe")
     $("#clients #appointment").addClass("fadeInUp");
     gon.page = "appointment"
-

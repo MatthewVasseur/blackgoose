@@ -61,14 +61,10 @@ body #clients {
   background-color:#fff;
 }
 
-#clients #down {
-  position:absolute;
-  font-size:50px;
-}
-
 #clients .container#escorts {
   width:90%;
   margin-top:50px;
+  overflow:hidden;
 }
 
 #clients .container#escorts .escort-block-out {
@@ -87,5 +83,4 @@ body #clients {
 }
 
 #clients #appointment {
-
 }
