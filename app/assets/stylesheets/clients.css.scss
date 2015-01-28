@@ -4,15 +4,6 @@
 
 .hideMe {
   pointer-events: none;
-  display:none;
-
-  webkit-transition: display 1s;
-  -moz-transition: display 1s;
-  -ms-transition: display 1s;
-  -o-transition: display 1s;
-  transition: display 1s;
-
-  transition-delay:2s;
 }
 
 body #clients {
@@ -90,8 +81,11 @@ body #clients {
 }
 
 #clients .container#escorts .escort-block-in {
-
   margin:10px 5px;
   padding-top:10px;
   padding-bottom:10px;
+}
+
+#clients #appointment {
+
 }

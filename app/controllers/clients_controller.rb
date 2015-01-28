@@ -11,9 +11,8 @@ class ClientsController < ApplicationController
       redirect_to root_path
     end
 
-    gon.push({
-      page:"start-zero"
-    })
+    @page = "start-zero"
+    gon.page = @page
 
   end
 end

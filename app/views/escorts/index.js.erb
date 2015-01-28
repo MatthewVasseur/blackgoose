@@ -10,7 +10,7 @@ $("#clients #buttons").removeClass("fadeInDown");
 <% end %>
 
 $("#clients #escorts").html("<%= escape_javascript(render "escorts/escorts") %>");
-$("#clients #escorts").removeClass("fadeOutDown")
+$("#clients #escorts").removeClass("fadeOutDown hideMe")
 $("#clients #escorts").addClass("fadeInUpBig");
 
 gon.page = "escorts";
