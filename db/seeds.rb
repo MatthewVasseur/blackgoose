@@ -69,7 +69,7 @@
     name: "Penn College Girl", line1: "69 Penn Lane", city: "Philadelphia",
     state: "PA", zip: "53062", dob:"1991-03-02", ethnicity:"White",
     height:"64", weight:"110", tit_size:"B", tit_type:"Natural", eyec:"Brown",
-    hairc:"Brown", password:"12345678", price:35{000})
+    hairc:"Brown", password:"12345678", price:35000})
 
   Escort.create({email: "your@fantasy.com", username: "YourFantasy",
     name: "Your Fantasy", line1: "69 Fantasy Street", city: "Fantasia",
