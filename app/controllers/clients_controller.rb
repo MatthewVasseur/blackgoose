@@ -11,7 +11,6 @@ class ClientsController < ApplicationController
       redirect_to root_path
     end
 
-    @page = "start-zero"
     gon.page = @page
 
   end
