@@ -45,3 +45,5 @@ pageDown = ->
     $("#clients #appointment").removeClass("fadeOutDown hideMe")
     $("#clients #appointment").addClass("fadeInUp");
     gon.page = "appointment"
+
+

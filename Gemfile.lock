@@ -61,6 +61,8 @@ GEM
     autoprefixer-rails (5.0.0.3)
       execjs
       json
+    autosize-rails (1.18.17)
+      rails (>= 3.1)
     bcrypt (3.1.9)
     bootstrap-sass (3.3.3)
       autoprefixer-rails (>= 5.0.0.1)
@@ -249,6 +251,7 @@ PLATFORMS
 DEPENDENCIES
   activeadmin!
   autoprefixer-rails
+  autosize-rails
   bootstrap-sass (~> 3.3.1)
   capistrano (~> 3.1)
   capistrano-bundler
