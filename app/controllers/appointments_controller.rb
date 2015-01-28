@@ -14,6 +14,9 @@ class AppointmentsController < ApplicationController
 
   def create
     @appointment = Appointment.new(appointment_params)
+
+    @appointment.time = DateTime.now + hours.to_i.hours
+
     @appointment.location = params[:street] + ":" + params[:city] + ":" +
       params[:state] + ":" + params[:zip]
 
@@ -23,7 +26,7 @@ class AppointmentsController < ApplicationController
     respond_to do |format|
       if @appointment.save
         AppointmentMailer.tonight_email(@appointment).deliver
-
+        @appointment.escort.update(booked: true)
         format.html { redirect_to home_client_path, notice: "Thank you for scheduling an Appointment!" }
       else
         format.html { render :new} # new_appointment, notice: "We're sorry, there was an error with your booking" }
@@ -35,6 +38,6 @@ class AppointmentsController < ApplicationController
   private
   # Never trust parameters from the scary internet, only allow the white list through.
   def appointment_params
-    params.require(:appointment).permit(:time, :price)
+    params.require(:appointment).permit(:price)
   end
 end

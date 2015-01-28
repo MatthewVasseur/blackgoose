@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150121050821) do
+ActiveRecord::Schema.define(version: 20150128145341) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -130,6 +130,7 @@ ActiveRecord::Schema.define(version: 20150121050821) do
     t.integer  "price"
     t.boolean  "online"
     t.string   "operation_area"
+    t.boolean  "booked",                 default: false
   end
 
   add_index "escorts", ["confirmation_token"], name: "index_escorts_on_confirmation_token", unique: true, using: :btree

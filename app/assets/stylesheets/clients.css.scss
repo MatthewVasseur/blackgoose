@@ -99,23 +99,27 @@ body #clients {
   margin-bottom:20px;
 }
 
-#clients #appointment .location-output {
+#clients #appointment .output {
   background:transparent;
   border:1px solid #333;
 }
 
-#clients #appointment .location-output#street {
+#clients #appointment .output#street {
   width:250px;
 }
 
-#clients #appointment .location-output#city {
+#clients #appointment .output#city {
   width:200px;
 }
 
-#clients #appointment .location-output#state {
+#clients #appointment .output#state {
   width:50px;
 }
 
-#clients #appointment .location-output#zip {
+#clients #appointment .output#zip {
+  width:80px;
+}
+
+#clients #appointment .output#hours {
   width:80px;
 }

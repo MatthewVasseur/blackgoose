@@ -24,41 +24,20 @@
 
     %h4
       Meet me at
-      %input{type:"text", id:"street", name:"street", value:"5 Fifth Avenue", class:"location-output"}
+      = text_field_tag :street, nil, placeholder:"5 Fifth Avenue", class:"output", required: true
       in
-      %input{type:"text", id:"city", name:"city", value:"New York City", class:"location-output"}
+      = text_field_tag :city, nil, placeholder:"New York City", class:"output", required: true
       ,
-      %input{type:"text", id:"state", name:"state", value:"NY", class:"location-output"}
+      = text_field_tag :state, nil, placeholder:"NY", class:"output", required: true
       ,
-      %input{type:"text", id:"zip", name:"zip", value:"06295", class:"location-output"}
+      = text_field_tag :zip, nil, placeholder:"06250", class:"output", required: true
 
+    %h4
+      Tonight, in
+      = text_field_tag :hours, nil, placeholder:"5", class:"output", required: true
+      hours
 
-    %h2
-      %b Where to Meet (Location)
-    .form-inline
-      = label_tag :street, "Street Address"
-      = text_field_tag :street, nil, placeholder: "27 Jefferson Road", required:true
-
-      = label_tag :city, "City"
-      = text_field_tag :city, nil, placeholder: "New York", required:true
-    .form-inline
-      = label_tag :state, "State"
-      = text_field_tag :state, nil, placeholder: "NY", required:true
-
-      = label_tag :zip, "Zip Code"
-      = text_field_tag :zip, nil, placeholder:"06295", required:true
-
-    %h2
-      %b When to Meet (Time)
-
-    (TO DO: CALENDAR)
-    = f.datetime_select :time
-
-    %h2
-      %b How much (Price)
-    .form-inline
-      = f.label :price, ((@escort.price / 100 ).to_s + " dollars")
-      = f.hidden_field :price, value: (@escort.price)
+    = f.hidden_field :price, value: (@escort.price)
 
     .actions
-      = f.submit "Schedule", class: "btn btn-success"
+      = f.submit "#{@escort.price / 100} dollars", class: "btn btn-success"
