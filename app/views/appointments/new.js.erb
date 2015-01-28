@@ -1,0 +1,16 @@
+$("#clients #escorts").addClass("fadeOutUp hideMe");
+$("#clients #escorts").removeClass("fadeInUpBig");
+
+jQuery.each($('#clients #escorts').children()[1].children, function() {
+  if ($(this)[0].id.split('escort')[1] == <%= params[:escort_ID] %>) {
+    $(this).addClass("chosen");
+  } else {
+    $(this).removeClass("chosen");
+  }
+});
+
+$("#clients #appointment").html("<%= escape_javascript(render "appointments/book") %>");
+$("#clients #appointment").removeClass("fadeOutDown")
+$("#clients #appointment").addClass("fadeInUp");
+
+gon.page = "appointment";

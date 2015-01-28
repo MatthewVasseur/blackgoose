@@ -1,9 +1,7 @@
-.col-md-3.escort-block-out
+.col-md-3.escort-block-out{id: "escort#{escort.id}"}
   .escort-block-in.text-center
-    = link_to show_escort_path(escort.username) do
+    = link_to new_appointment_path(escort_ID: escort.id), remote:true do
       = image_tag "escort-pics/escort#{escort.id}.png", width:'200px'
-
-    = link_to "Book", new_appointment_path(escort_ID: escort.id)
 
     -#
       %div.carousel.slide{id:"carousel-escort#{escort.id}", data:{ride:"carousel"}}

@@ -5,6 +5,11 @@ class AppointmentsController < ApplicationController
     @appointment = Appointment.new
     @escort = Escort.find(params[:escort_ID])
     @client = current_client
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def create

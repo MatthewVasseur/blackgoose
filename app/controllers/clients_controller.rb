@@ -11,12 +11,9 @@ class ClientsController < ApplicationController
       redirect_to root_path
     end
 
-    @chosen_escort = nil
-
     gon.push({
       page:"start-zero"
     })
-
 
   end
 end
