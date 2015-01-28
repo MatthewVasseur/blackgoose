@@ -15,7 +15,7 @@ class AppointmentsController < ApplicationController
   def create
     @appointment = Appointment.new(appointment_params)
 
-    @appointment.time = DateTime.now + hours.to_i.hours
+    @appointment.time = DateTime.now + params[:hours].to_i.hours
 
     @appointment.location = params[:street] + ":" + params[:city] + ":" +
       params[:state] + ":" + params[:zip]
