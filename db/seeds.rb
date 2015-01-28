@@ -52,12 +52,11 @@
     password: "jjllama22"})
 
   # Escorts
-
   Escort.create({email: "example@example.com", username: "Example",
     name: "Example Girl", line1: "69 Example Lane", city: "Examplity",
     state: "EX", zip: "55569", dob:"1990-03-02", ethnicity:"White",
     height:"69", weight:"120", tit_size:"C", tit_type:"Natural", eyec:"Blue",
-    hairc:"Blonde", password:"12345678", price:30000})
+    hairc:"Blonde", password:"12345678", price:30000, online:true})
 
   Escort.create({email: "girl@escorting.com", name: "Hot Girl Escort",
     username: "HotGirl112", line1: "69 California Drive", city: "Las Vegas",
@@ -69,16 +68,35 @@
     name: "Penn College Girl", line1: "69 Penn Lane", city: "Philadelphia",
     state: "PA", zip: "53062", dob:"1991-03-02", ethnicity:"White",
     height:"64", weight:"110", tit_size:"B", tit_type:"Natural", eyec:"Brown",
-    hairc:"Brown", password:"12345678", price:35000})
+    hairc:"Brown", password:"12345678", price:35000, online:true})
 
   Escort.create({email: "your@fantasy.com", username: "YourFantasy",
     name: "Your Fantasy", line1: "69 Fantasy Street", city: "Fantasia",
     state: "FA", zip: "00001", dob:"1990-12-02", ethnicity:"Black",
     height:"67", weight:"114", tit_size:"D", tit_type:"Fake", eyec:"Brown",
-    hairc:"Black", password:"12345678", price:30000})
+    hairc:"Black", password:"12345678", price:30000, online:true})
 
   Escort.create({email: "generic@typical.com", username: "Generic Escort",
     name: "Generic Escort", line1: "69 Typical Road", city: "Genericity",
     state: "GE", zip: "12345", dob:"1990-09-09", ethnicity:"Asian",
     height:"63", weight:"100", tit_size:"DD", tit_type:"Natural", eyec:"Green",
     hairc:"Brown", password:"12345678", price:30000})
+
+  Escort.create({email: "kurt@marmaris.com", username: "kurtmsk",
+    name: "KKush Esscort", line1: "69 Typical Road", city: "Genericity",
+    state: "GE", zip: "12345", dob:"1990-09-09", ethnicity:"White",
+    height:"63", weight:"100", tit_size:"C", tit_type:"Natural", eyec:"Blue",
+    hairc:"Blonde", password:"12345678", price:40000})
+
+  Escort.create({email: "matt@marmaris.com", username: "marbv",
+    name: "Mar BerVes", line1: "69 Typical Road", city: "Genericity",
+    state: "GE", zip: "12345", dob:"1990-09-09", ethnicity:"White",
+    height:"63", weight:"100", tit_size:"C", tit_type:"Natural", eyec:"Blue",
+    hairc:"Blonde", password:"12345678", price:50000, online:true})
+
+# intialize
+Client.find_by_username("mbv").update(verified:true)
+
+Escort.all.each do |e|
+  e.update(verified: true)
+end
