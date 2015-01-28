@@ -13,6 +13,6 @@ $("#clients #appointment").html("<%= escape_javascript(render "appointments/book
 $("#clients #appointment").removeClass("fadeOutDown")
 $("#clients #appointment").addClass("fadeInUp");
 
-$("#clients #escorts").animate({height: "0"}, 2000);
+$("#clients #escorts").animate({height: "0", marginTop:"10px"}, 2000);
 
 gon.page = "appointment";

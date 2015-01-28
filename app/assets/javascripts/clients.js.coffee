@@ -23,7 +23,7 @@ pageUp = ->
     gon.page = "buttons"
 
   else if (gon.page == "appointment")
-    $("#clients #escorts").animate({height: "100%"}, 0);
+    $("#clients #escorts").animate({height: "100%",  marginTop: "50px"}, 0);
     $("#clients #escorts").addClass("fadeInDownBig");
     $("#clients #escorts").removeClass("fadeOutUp hideMe");
     $("#clients #appointment").addClass("fadeOutDown hideMe")
@@ -39,7 +39,7 @@ pageDown = ->
     gon.page = "escorts"
 
   else if (gon.page == "escorts")
-    $("#clients #escorts").animate({height: "0"}, 2750);
+    $("#clients #escorts").animate({height: "0",  marginTop: "10px"}, 2000);
     $("#clients #escorts").addClass("fadeOutUp hideMe");
     $("#clients #escorts").removeClass("fadeInUpBig");
     $("#clients #appointment").removeClass("fadeOutDown hideMe")

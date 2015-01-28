@@ -82,5 +82,19 @@ body #clients {
   padding-bottom:10px;
 }
 
-#clients #appointment {
+#clients #appointment .img {
+
+}
+
+#clients #appointment .info {
+  margin-right:0;
+  margin-top:0;
+  margin-bottom:0;
+  padding:0;
+  padding-top:50px;
+}
+
+#clients #appointment .info p {
+  font-size:18px;
+  margin-bottom:20px;
 }
