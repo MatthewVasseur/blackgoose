@@ -10,7 +10,7 @@ jQuery.each($('#clients #escorts').children()[1].children, function() {
 });
 
 $("#clients #appointment").html("<%= escape_javascript(render "appointments/book") %>");
-$("#clients #appointment").removeClass("fadeOutDown")
+$("#clients #appointment").removeClass("fadeOutDown hideMe")
 $("#clients #appointment").addClass("fadeInUp");
 
 $("#clients #escorts").animate({height: "0", marginTop:"10px"}, 2000);
