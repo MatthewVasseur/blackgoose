@@ -33,9 +33,14 @@
       = text_field_tag :zip, nil, placeholder:"06250", class:"output", required: true
 
     %h4
-      Tonight, in
-      = text_field_tag :hours, nil, placeholder:"5", class:"output", required: true
-      hours
+      - if params[:time_now] == "true"
+        Tonight, in
+        = text_field_tag :hours, nil, placeholder:"5", class:"output", required: true
+        hours
+      - else
+        On the date
+        = f.datetime_select :time
+
 
     = f.hidden_field :price, value: (@escort.price)
 
