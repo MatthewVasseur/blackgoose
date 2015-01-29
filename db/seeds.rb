@@ -143,7 +143,7 @@ AdminUser.create!(email: 'admin@marmar.is', password: 'password1', password_conf
 Client.find_by_username("mbv").update(verified:true)
 Client.find_by_username("jjllama").update(verified:true)
 
-Escort.update_all(verified:true) # verify all seeds
+Escort.update_all(verified:true, operation_area: "LA") # verify all seeds
 
 # confirm all seeds
 Escort.all.each do |e|
