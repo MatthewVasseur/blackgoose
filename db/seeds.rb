@@ -148,5 +148,4 @@ Escort.update_all(verified:true, operation_area: "LA") # verify all seeds
 # confirm all seeds
 Escort.all.each do |e|
   e.confirm!
-  assert(e.confirmed?)
 end
