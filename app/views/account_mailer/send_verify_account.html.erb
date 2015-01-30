@@ -1,0 +1,18 @@
+<h1>Verify This <%= @account.class.name %> Account</h1>
+
+<p>Verify within the next 24 hours!<p>
+
+<br />
+
+<p>Username: <%= @account.username %></p>
+<p>Name: <%= @account.name%></p>
+<p>Date of Birth: <%= @account.dob %></p>
+<p>Address: <%= @account.line1 + " -- " + @account.city  + " -- " + @account.state  + " -- " + @account.zip %></p>
+
+<br />
+
+<p><%= link_to "Verify via Admin Interface Now", admin_root_url  %></p>
+
+
+<br />
+<p>Don't be late!</p>

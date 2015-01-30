@@ -9,6 +9,6 @@ module VerifyEmail
   protected
 
   def send_verify_email
-    AccountsMailer.send_verify_account(self).deliver
+    AccountMailer.send_verify_account(self).deliver
   end
 end

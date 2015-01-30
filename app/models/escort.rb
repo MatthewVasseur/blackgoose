@@ -8,6 +8,9 @@ class Escort < ActiveRecord::Base
   # for generating random tokens (i.e. numbers)
   include Tokenable
 
+  # for sending verification emails
+  include VerifyEmail
+
   # appointments relationship
   has_many :appointments
   has_many :clients, through: :appointments
