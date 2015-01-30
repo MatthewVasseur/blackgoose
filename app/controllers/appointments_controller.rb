@@ -1,5 +1,5 @@
 class AppointmentsController < ApplicationController
-  before_filter :authenticate_client!, only: [:new]
+  before_filter :authenticate_client!, only: [:new, :create]
 
   def new
     @appointment = Appointment.new
@@ -25,7 +25,7 @@ class AppointmentsController < ApplicationController
 
     respond_to do |format|
       if @appointment.save
-        AppointmentMailer.tonight_email(@appointment).deliver
+        AppointmentMailer.send_tonight_email(@appointment).deliver
         @appointment.escort.update(booked: true)
         format.html { redirect_to home_client_path, notice: "Thank you for scheduling an Appointment!" }
       else
