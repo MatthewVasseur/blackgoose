@@ -1,5 +1,5 @@
 ActiveAdmin.register Client do
-  #permit_params :username, :password,
+  permit_params :verified
 
   index do
     selectable_column

@@ -1,4 +1,5 @@
 ActiveAdmin.register Escort do
+  permit_params :booked, :verified
 
   index do
     selectable_column
