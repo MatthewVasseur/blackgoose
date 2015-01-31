@@ -4,7 +4,6 @@
   .row
     .col-md-2.col-md-offset-2.info
       %p #{@escort.ethnicity}
-      %p #{Time.now.year - @escort.dob.year} years old
       %p #{@escort.height} inches
       %p #{@escort.weight} pounds
 
@@ -12,10 +11,9 @@
       = image_tag "escort-pics/escort#{@escort.id}.png", width:'300px'
 
     .col-md-2.info
+      %p #{Time.now.year - @escort.dob.year} years old
       %p #{@escort.eyec} eyes
       %p #{@escort.hairc} hair
-      %p #{@escort.tit_type} breasts
-      %p #{@escort.tit_size} cup
 
   = form_for @appointment, html:{role:"form"} do |f|
     = hidden_field_tag :client_ID, @client.id
