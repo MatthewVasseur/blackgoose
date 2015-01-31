@@ -9,7 +9,7 @@ class EscortsController < ApplicationController
     end
 
     if !params[:search].blank?
-      @escorts = Escort.where("username LIKE ?", "%#{params[:search].downcase}%")
+      @escorts = Escort.where("username LIKE ? OR hairc LIKE ? OR eyec LIKE ? OR ethnicity LIKE ?", "%#{params[:search].downcase}%", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%")
     end
 
     respond_to do |format|
