@@ -6,7 +6,7 @@
       = link_to root_path, id:"logo" do
         = image_tag "logo.png", width: '200px'
       .right
-        = form_tag escorts_path(time_now: params[:time_now]), html:{role:"role"}, method: :get, remote: true do
+        = form_tag escorts_path(), html:{role:"role"}, method: :get, remote: true do
           = text_field_tag :search, params[:search], placeholder:"Search for an Escort"
           = submit_tag 'Search'
     %div
