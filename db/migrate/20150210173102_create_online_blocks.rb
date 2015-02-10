@@ -4,6 +4,8 @@ class CreateOnlineBlocks < ActiveRecord::Migration
       t.integer :day
       t.time :start
       t.time :end
+      #t.boolean :online, default: true
+
       t.references :escort, index: true
 
       t.timestamps null: false
