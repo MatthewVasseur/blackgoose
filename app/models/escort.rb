@@ -14,6 +14,7 @@ class Escort < ActiveRecord::Base
   # appointments relationship
   has_many :appointments
   has_many :clients, through: :appointments
+  has_many :onlineBlocks
 
   validates :username, presence: true
   validates :username, uniqueness: { case_sensitive: false}, if: -> { self.username.present? }
