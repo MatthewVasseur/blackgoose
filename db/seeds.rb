@@ -154,7 +154,7 @@ end
 t1 = Time.new(1995, 11, 8, 12, 0, 0, "+00:00");
 t2 = Time.new(1995, 11, 8, 0, 0, 0, "+00:00");
 t3 = Time.new(1995, 11, 8, 20, 0, 0, "+00:00");
-OnlineBlock.create!(day:0, sTime:t2, duration:3, escort_id:1) # 0 = Monday
-OnlineBlock.create!(day:6, sTime:t3, duration:4, escort_id:1) # 6 = Sunday
-OnlineBlock.create!(day:2, sTime:t1, duration:1, escort_id:1) # 2 = Wednesday
-OnlineBlock.create!(day:5, sTime:t1, duration:6, escort_id:1) # 5 = Saturday
+OnlineBlock.create!(day:0, start_time:t2, end_time:t2+3.hours, escort_id:1) # 0 = Monday
+OnlineBlock.create!(day:6, start_time:t3, end_time:t2+4.hours, escort_id:1) # 6 = Sunday
+OnlineBlock.create!(day:2, start_time:t1, end_time:t2+1.hours, escort_id:1) # 2 = Wednesday
+OnlineBlock.create!(day:5, start_time:t1, end_time:t2+6.hours, escort_id:1) # 5 = Saturday

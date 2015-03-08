@@ -131,7 +131,7 @@ ActiveRecord::Schema.define(version: 20150307234844) do
     t.boolean  "online"
     t.boolean  "booked",                 default: false
     t.string   "phone"
-    t.integer  "security"
+    t.integer  "security",               default: 0
   end
 
   add_index "escorts", ["confirmation_token"], name: "index_escorts_on_confirmation_token", unique: true, using: :btree
@@ -141,7 +141,7 @@ ActiveRecord::Schema.define(version: 20150307234844) do
 
   create_table "online_blocks", force: :cascade do |t|
     t.integer  "day"
-    t.time     "sTime"
+    t.time     "start_time"
     t.integer  "duration"
     t.integer  "escort_id"
     t.datetime "created_at", null: false
