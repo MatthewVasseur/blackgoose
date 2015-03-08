@@ -28,6 +28,12 @@ class AppointmentsController < ApplicationController
         AppointmentMailer.send_tonight_email(@appointment).deliver
         @appointment.escort.update(booked: true)
 
+        $twilio_client.account.messages.create({
+          :from => '+16692366292',
+          :to => "#{escort.phone}",
+          :body => 'Hello #{escort.name}! You have a new appointment! #{appointment.id}.',
+          })
+
         format.html { redirect_to home_client_path, notice: "Thank you for scheduling an Appointment!" }
       else
         format.html { render :new} # new_appointment, notice: "We're sorry, there was an error with your booking" }
