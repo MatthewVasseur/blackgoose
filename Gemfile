@@ -78,3 +78,6 @@ gem "letter_opener", :group => :development
 
 # gon for javascript
 gem 'gon'
+
+# twilio ruby
+gem 'twilio-ruby', '~> 3.12'

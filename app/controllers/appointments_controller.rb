@@ -27,6 +27,7 @@ class AppointmentsController < ApplicationController
       if @appointment.save
         AppointmentMailer.send_tonight_email(@appointment).deliver
         @appointment.escort.update(booked: true)
+
         format.html { redirect_to home_client_path, notice: "Thank you for scheduling an Appointment!" }
       else
         format.html { render :new} # new_appointment, notice: "We're sorry, there was an error with your booking" }
