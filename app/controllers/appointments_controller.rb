@@ -29,9 +29,9 @@ class AppointmentsController < ApplicationController
         @appointment.escort.update(booked: true)
 
         $twilio_client.account.messages.create({
-          :from => '+16692366292',
-          :to => "#{escort.phone}",
-          :body => 'Hello #{escort.name}! You have a new appointment! #{appointment.id}.',
+          :from => Rails.application.secrets.twilio_my_number,
+          :to => "#{@appointment.escort.phone}",
+          :body => "Hello #{@appointment.escort.name}! You have a new appointment! #{@appointment}.",
           })
 
         format.html { redirect_to home_client_path, notice: "Thank you for scheduling an Appointment!" }
