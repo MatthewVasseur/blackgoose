@@ -140,8 +140,8 @@ ActiveRecord::Schema.define(version: 20150307234844) do
 
   create_table "online_blocks", force: :cascade do |t|
     t.integer  "day"
-    t.time     "start_time"
-    t.time     "end_time"
+    t.string   "start_time"
+    t.string   "end_time"
     t.integer  "escort_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
