@@ -128,8 +128,7 @@ ActiveRecord::Schema.define(version: 20150307234844) do
     t.boolean  "verified",               default: false
     t.string   "token",                  default: "0"
     t.integer  "price"
-    t.boolean  "online"
-    t.boolean  "booked",                 default: false
+    t.boolean  "online",                 default: false
     t.string   "phone"
     t.integer  "security",               default: 0
   end
@@ -142,7 +141,7 @@ ActiveRecord::Schema.define(version: 20150307234844) do
   create_table "online_blocks", force: :cascade do |t|
     t.integer  "day"
     t.time     "start_time"
-    t.integer  "duration"
+    t.time     "end_time"
     t.integer  "escort_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

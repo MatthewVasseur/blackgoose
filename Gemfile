@@ -58,6 +58,9 @@ group :development do
   gem 'capistrano-rbenv', '~> 2.0'
   gem 'capistrano-unicorn-nginx', '~> 3.0'
   gem 'capistrano-postgresql', '~> 4.2'
+
+  # development email
+  gem 'letter_opener'
 end
 
 # Use debugger
@@ -72,9 +75,6 @@ gem 'activeadmin', github: 'activeadmin'
 
 # puma server
 gem 'puma'
-
-# developement email
-gem "letter_opener", :group => :development
 
 # gon for javascript
 gem 'gon'

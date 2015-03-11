@@ -2,8 +2,10 @@ class CreateOnlineBlocks < ActiveRecord::Migration
   def change
     create_table :online_blocks do |t|
       t.integer :day
-      t.time :start_time
-      t.time :end_time
+      t.string :start_time
+      t.string :end_time
+      #t.time :start_time
+      #t.time :end_time
       #t.integer :duration
       #t.boolean :online, default: true
 

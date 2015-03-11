@@ -56,7 +56,7 @@ Escort.create({email: "kurt@marmar.is", username: "Example",
   name: "Example Girl", line1: "69 Example Lane", city: "Examplity",
   state: "EX", zip: "55569", dob:"1990-03-02", ethnicity:"White",
   height:"69", weight:"120", tit_size:"C", tit_type:"Natural", eyec:"Blue",
-  hairc:"Blonde", password:"12345678", phone:"3105705764", price:30000, online:true})
+  hairc:"Blonde", password:"12345678", phone:"3105705764", price:30000})
 
 Escort.create({email: "matt@marmar.is", name: "Hot Girl Escort",
   username: "HotGirl112", line1: "69 California Drive", city: "Las Vegas",
@@ -68,19 +68,19 @@ Escort.create({email: "mattvasseur@gmail.com", username: "PennCollegeGirl",
   name: "Penn College Girl", line1: "69 Penn Lane", city: "Philadelphia",
   state: "PA", zip: "53062", dob:"1991-03-02", ethnicity:"White",
   height:"64", weight:"110", tit_size:"B", tit_type:"Natural", eyec:"Brown",
-  hairc:"Brown", password:"12345678", phone:"7327701906", price:35000, online:true})
+  hairc:"Brown", password:"12345678", phone:"7327701906", price:35000})
 
 Escort.create({email: "matthew.vasseur@yale.edu", username: "YourFantasy",
   name: "Your Fantasy", line1: "69 Fantasy Street", city: "Fantasia",
   state: "FA", zip: "00001", dob:"1990-12-02", ethnicity:"Black",
   height:"67", weight:"114", tit_size:"D", tit_type:"Fake", eyec:"Brown",
-  hairc:"Black", password:"12345678", phone:"7327701906", price:30000, online:true})
+  hairc:"Black", password:"12345678", phone:"7327701906", price:30000})
 
 Escort.create({email: "kurtmsk@gmail.com", username: "Sabrina",
   name: "Generic Escort", line1: "69 Typical Road", city: "Genericity",
   state: "GE", zip: "12345", dob:"1994-09-09", ethnicity:"White",
   height:"70", weight:"110", tit_size:"C", tit_type:"Natural", eyec:"Blue",
-  hairc:"Blonde", password:"12345678", phone:"7327701906", price:35000, online:true})
+  hairc:"Blonde", password:"12345678", phone:"7327701906", price:35000})
 
 Escort.create({email: "admin@marmar.is", username: "kurtmsk",
   name: "KKush Esscort", line1: "69 Typical Road", city: "Genericity",
@@ -98,7 +98,7 @@ Escort.create({email: "e38440@trbvm.com", username: "Cherry Blossom",
   name: "Sherry Blume", line1: "69 Typical Road", city: "Genericity",
   state: "GE", zip: "12345", dob:"1985-09-09", ethnicity:"White",
   height:"72", weight:"123", tit_size:"C", tit_type:"Natural", eyec:"Blue",
-  hairc:"Blonde", password:"12345678", phone:"7327701906", price:30000, online:true})
+  hairc:"Blonde", password:"12345678", phone:"7327701906", price:30000})
 
 Escort.create({email: "e38492@trbvm.com", username: "Lovely Lips",
   name: "Laurel Longinus", line1: "69 Typical Road", city: "Genericity",
@@ -122,7 +122,7 @@ Escort.create({email: "omk17691@kiois.com", username: "Desirea",
   name: "Gloria Vasquez", line1: "69 Typical Road", city: "Genericity",
   state: "GE", zip: "12345", dob:"1985-09-09", ethnicity:"Hispanic",
   height:"68", weight:"142", tit_size:"D", tit_type:"Fake", eyec:"Hazel",
-  hairc:"Brown", password:"12345678", phone:"7327701906", price:32500, online:true})
+  hairc:"Brown", password:"12345678", phone:"7327701906", price:32500})
 
 Escort.create({email: "sqi51153@kiois.com", username: "Kennedy Adams",
   name: "Amber Fitzgerald", line1: "69 Typical Road", city: "Genericity",
@@ -134,7 +134,7 @@ Escort.create({email: "ttd35307@kiois.com", username: "Celestina",
   name: "Celeste de la Fleur", line1: "69 Typical Road", city: "Genericity",
   state: "GE", zip: "12345", dob:"1994-09-09", ethnicity:"White",
   height:"76", weight:"111", tit_size:"A", tit_type:"Fake", eyec:"Blue",
-  hairc:"Blonde", password:"12345678", phone:"7327701906", price:75000, online:true})
+  hairc:"Blonde", password:"12345678", phone:"7327701906", price:75000})
 
 # Admin User
 AdminUser.create!(email: 'admin@marmar.is', password: 'password1', password_confirmation: 'password1')
@@ -151,10 +151,7 @@ Escort.all.each do |e|
 end
 
 # Add OnlineBlocks
-t1 = Time.new(1995, 11, 8, 12, 0, 0, "+00:00");
-t2 = Time.new(1995, 11, 8, 0, 0, 0, "+00:00");
-t3 = Time.new(1995, 11, 8, 20, 0, 0, "+00:00");
-OnlineBlock.create!(day:0, start_time:t2, end_time:t2+3.hours, escort_id:1) # 0 = Monday
-OnlineBlock.create!(day:6, start_time:t3, end_time:t2+4.hours, escort_id:1) # 6 = Sunday
-OnlineBlock.create!(day:2, start_time:t1, end_time:t2+1.hours, escort_id:1) # 2 = Wednesday
-OnlineBlock.create!(day:5, start_time:t1, end_time:t2+6.hours, escort_id:1) # 5 = Saturday
+OnlineBlock.create!(day:0, start_time:"00:00", end_time:"03:00", escort_id:2) # 0 = Sunday
+OnlineBlock.create!(day:6, start_time:"20:00", end_time:"24:00", escort_id:2) # 6 = Saturday
+OnlineBlock.create!(day:2, start_time:"12:00", end_time:"13:00", escort_id:2) # 2 = Tuesday
+OnlineBlock.create!(day:5, start_time:"12:00", end_time:"18:00", escort_id:2) # 5 = Friday

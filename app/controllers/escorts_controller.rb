@@ -3,7 +3,7 @@ class EscortsController < ApplicationController
 
   def index
     if params[:time_now] == "true"
-      @escorts = Escort.where(online: true, booked:false)
+      @escorts = Escort.where(online: true)
     else
       @escorts = Escort.all
     end
