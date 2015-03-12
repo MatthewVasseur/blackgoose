@@ -81,3 +81,6 @@ gem 'gon'
 
 # twilio ruby
 gem 'twilio-ruby', '~> 3.12'
+
+# running rake tasks
+gem 'whenever', require: false
