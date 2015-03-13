@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150128145341) do
+ActiveRecord::Schema.define(version: 20150307234844) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -128,9 +128,9 @@ ActiveRecord::Schema.define(version: 20150128145341) do
     t.boolean  "verified",               default: false
     t.string   "token",                  default: "0"
     t.integer  "price"
-    t.boolean  "online"
-    t.string   "operation_area"
-    t.boolean  "booked",                 default: false
+    t.boolean  "online",                 default: false
+    t.string   "phone"
+    t.integer  "security",               default: 0
   end
 
   add_index "escorts", ["confirmation_token"], name: "index_escorts_on_confirmation_token", unique: true, using: :btree
@@ -138,4 +138,16 @@ ActiveRecord::Schema.define(version: 20150128145341) do
   add_index "escorts", ["reset_password_token"], name: "index_escorts_on_reset_password_token", unique: true, using: :btree
   add_index "escorts", ["username"], name: "index_escorts_on_username", unique: true, using: :btree
 
+  create_table "online_blocks", force: :cascade do |t|
+    t.integer  "day"
+    t.string   "start_time"
+    t.string   "end_time"
+    t.integer  "escort_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "online_blocks", ["escort_id"], name: "index_online_blocks_on_escort_id", using: :btree
+
+  add_foreign_key "online_blocks", "escorts"
 end
