@@ -1,7 +1,7 @@
 namespace :update do
   desc "Update the online status of each escort"
   task online: :environment do
-    puts("### start update:online #{Time.now} ###")
+    puts("### start update:online (#{Time.now}) ###")
 
     t = Time.now # current time
     # for each escort, update status of online
@@ -28,6 +28,6 @@ namespace :update do
 
     puts("#{Escort.pluck(:id).zip(Escort.pluck(:online)).sort}")
 
-    puts("### end update:online #{Time.now} ###")
+    puts("### end update:online (#{Time.now}) ###\n")
   end
 end

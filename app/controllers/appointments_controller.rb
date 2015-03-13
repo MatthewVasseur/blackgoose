@@ -25,15 +25,8 @@ class AppointmentsController < ApplicationController
 
     respond_to do |format|
       if @appointment.save
-        AppointmentMailer.send_tonight_email(@appointment).deliver
-        @appointment.escort.update(booked: true)
-
-        $twilio_client.account.messages.create({
-          :from => Rails.application.secrets.twilio_my_number,
-          :to => "#{@appointment.escort.phone}",
-          :body => "Hello #{@appointment.escort.name}! You have a new appointment! #{@appointment}.",
-          })
-
+        AppointmentMailer.send_notif_email(@appointment).deliver
+        AppointmentMailer.send_notif_text(@appointment).deliver
         format.html { redirect_to home_client_path, notice: "Thank you for scheduling an Appointment!" }
       else
         format.html { render :new} # new_appointment, notice: "We're sorry, there was an error with your booking" }
